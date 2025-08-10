@@ -1,7 +1,7 @@
 "use client";
 
 import { AuthLayout } from "@/modules/auth/ui/layouts/auth-layout";
-import { OrgSelectView } from "@/modules/auth/ui/views/org-select-view";
+import { OrgSelectionView } from "@/modules/auth/ui/views/org-selection-view";
 import { useOrganization } from "@clerk/nextjs";
 
 export const OrganizationGuard = ({
@@ -14,7 +14,7 @@ export const OrganizationGuard = ({
   if (!organization) {
     return (
       <AuthLayout>
-        <OrgSelectView />
+        <OrgSelectionView />
       </AuthLayout>
     );
   }
